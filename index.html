@@ -11,25 +11,16 @@ user-scalable=no;" />
 src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
 function onBodyLoad() {
-document.addEventListener("deviceready", onDeviceReady,
+document.addEventListener("deviceready",onDeviceReady,
 false);
 }
 function onDeviceReady() {
-//Get the appInfo DOM element
-var element = document.getElementById('appInfo');
-//replace it with specific information about the device
-//running the application
-element.innerHTML = 'PhoneGap (version ' +
-device.phonegap + ')<br />' + device.platform + ' ' +
-device.name + ' (version ' + device.version + ').';
+navigator.notification.alert("PhoneGap is ready!");
 }
 </script>
 </head>
 <body onload="onBodyLoad()">
-<h1>HelloWorld3</h1>
-<p>This is a PhoneGap application that makes calls to the
-PhoneGap APIs.</p>
-<p id="appInfo">Waiting for PhoneGap Initialization to
-complete</p>
+<h1>HelloWorld2</h1>
+<p>This is a sample PhoneGap application.</p>
 </body>
 </html>
